@@ -9,9 +9,26 @@ let fruits: [&str; 3] = ["apple", "banaa", "orange"];
 
 let human: (String, u32, bool) = ("Alice".to_string(), 32, true);
     println!("this is alice: {:?}", human);
-let my_mix_tuple = ("Him", 22, true,[1,2,3]);
-    println!("this is Him: {:?}", my_mix_tuple);
-//(string, u32, bool,)
+let tuple: (&str, u32, bool) = ("Him", 22, true);
+        println!("Name: {}", tuple.0);
+            println!("Age: {}", tuple.1);
+                println!("Is active: {}", tuple.2);
+                
+let (name, age, is_active) = tuple;
+println!("{} is {} years old, and {}", name, age,is_active);
+
+//claude excercise 
+let student1: (&str, u32, char) = ("alex", 19, 'B');
+let student2: (&str, u32, char) = ("Leon", 20, 'C');
+let student3: (&str, u32, char) = ("Hassan", 21, 'A');
+
+let (student1_name, student1_age, student1_grade) = student1;
+let (student2_name, student2_age, student2_grade) = student2;
+let (student3_name, student3_age, student3_grade) = student3;
+
+
+    println!("the 3 Test Rauslts are as following: \n {} scored at {} years old, scored a solid {}.\n for the Next Test Resault we got {}, age {} scoring a {}.\n for the last score its {} at {} years old scoring an impressive {}", 
+    student1_name,student1_age,student1_grade,student2_name,student2_age,student2_grade,student3_name,student3_age,student3_grade)
 
 }
 
